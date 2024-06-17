@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import css from './RegistrationForm.module.css';
 
 const contactSchema = Yup.object().shape({
-  username: Yup.string().min(3, 'Name must be longer').required('Required!'),
+  name: Yup.string().min(3, 'Name must be longer').required('Required!'),
   email: Yup.string().email('Invalid email address!').required('Required!'),
   password: Yup.string()
     .min(5, 'Too Short!')
@@ -25,7 +25,7 @@ export default function RegistrationForm() {
 
   return (
     <Formik
-      initialValues={{ username: '', email: '', password: '' }}
+      initialValues={{ name: '', email: '', password: '' }}
       onSubmit={handleSubmit}
       validationSchema={contactSchema}
     >
@@ -34,20 +34,18 @@ export default function RegistrationForm() {
           <label htmlFor={usernameFieldId}>Username</label>
           <Field
             type="text"
+            autoComplete="username"
             className={css.input}
-            name="username"
+            name="name"
             id={usernameFieldId}
           />
-          <ErrorMessage
-            className={css.error}
-            name="username"
-            component="span"
-          />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div className={css.formItem}>
           <label htmlFor={emailFieldId}>Email</label>
           <Field
             type="email"
+            autoComplete="email"
             className={css.input}
             name="email"
             id={emailFieldId}
@@ -58,6 +56,7 @@ export default function RegistrationForm() {
           <label htmlFor={passwordFieldId}>Password</label>
           <Field
             type="password"
+            autoComplete="new-password"
             className={css.input}
             name="password"
             id={passwordFieldId}
@@ -68,7 +67,7 @@ export default function RegistrationForm() {
             component="span"
           />
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit">Register</button>
       </Form>
     </Formik>
   );

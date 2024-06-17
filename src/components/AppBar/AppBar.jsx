@@ -8,8 +8,8 @@ export default function AppBar() {
   return (
     <header className={css.header}>
       <Navigation />
-      <AuthNav />
       <UserMenu />
+      <AuthNav />
     </header>
   );
 }

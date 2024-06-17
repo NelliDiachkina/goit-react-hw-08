@@ -32,6 +32,7 @@ export default function LoginForm() {
           <label htmlFor={emailFieldId}>Email</label>
           <Field
             type="email"
+            autoComplete="email"
             className={css.input}
             name="email"
             id={emailFieldId}
@@ -42,6 +43,7 @@ export default function LoginForm() {
           <label htmlFor={passwordFieldId}>Password</label>
           <Field
             type="password"
+            autoComplete="current-password"
             className={css.input}
             name="password"
             id={passwordFieldId}
