@@ -1,0 +1,31 @@
+.contactListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text {
+  display: flex;
+  align-items: first baseline;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.link {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}

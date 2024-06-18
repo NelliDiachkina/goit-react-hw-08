@@ -3,23 +3,23 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 
 import css from './RegistrationForm.module.css';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/operations';
 
 const contactSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Name must be longer').required('Required!'),
   email: Yup.string().email('Invalid email address!').required('Required!'),
-  password: Yup.string()
-    .min(5, 'Too Short!')
-    .max(12, 'Too Long!')
-    .required('Required!'),
+  password: Yup.string().min(7, 'Too Short!').required('Required!'),
 });
 
 export default function RegistrationForm() {
+  const dispatch = useDispatch();
   const usernameFieldId = useId();
   const emailFieldId = useId();
   const passwordFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    dispatch(register(values));
     actions.resetForm();
   };
 

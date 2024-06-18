@@ -1,0 +1,13 @@
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contactList {
+    justify-content: flex-start;
+  }
+}

@@ -4,11 +4,11 @@ import css from './Loader.module.css';
 export default function Loader() {
   return (
     <div className={css.wrapper}>
-      <p>Loading ...</p>
+      <span>Loading ...</span>
       <InfinitySpin
         visible={true}
-        width="200"
-        color="#ffffffde"
+        width="180"
+        color="#646cff"
         ariaLabel="infinity-spin-loading"
       />
     </div>
