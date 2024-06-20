@@ -3,7 +3,9 @@ import {
   fetchContacts,
   deleteContact,
   addContact,
+  updateContact,
 } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
 
 const contactsSlice = createSlice({
   name: 'contacts',
@@ -33,6 +35,7 @@ const contactsSlice = createSlice({
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.loading = false;
         state.items = state.items.filter(item => item.id !== action.payload.id);
+        toast.success('DELETED! 🗑️');
       })
       .addCase(deleteContact.rejected, state => {
         state.loading = false;
@@ -45,10 +48,19 @@ const contactsSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => {
         state.loading = false;
         state.items.push(action.payload);
+        toast.success('Added contact! 😊');
       })
       .addCase(addContact.rejected, state => {
         state.loading = false;
         state.error = true;
+      })
+      .addCase(updateContact.fulfilled, (state, action) => {
+        state.loading = false;
+        const indexContact = state.items.findIndex(
+          item => item.id === action.payload.id
+        );
+        state.items[indexContact] = action.payload;
+        toast.success('Contact changed! 😊');
       }),
 });
 

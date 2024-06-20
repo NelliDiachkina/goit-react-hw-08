@@ -9,9 +9,11 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  box-shadow: var(--box-shadow);
 }
 
-.wrapper {
+.wrapper,
+.wrapperBtn {
   display: flex;
   flex-direction: column;
   gap: 8px;

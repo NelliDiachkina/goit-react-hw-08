@@ -1,0 +1,80 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e2f42bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  min-width: 300px;
+  width: 420px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcfcfc;
+  box-shadow: var(--box-shadow);
+}
+
+.formItem {
+  width: 100%;
+}
+
+.input {
+  display: block;
+  margin-top: 5px;
+  height: 32px;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 1px solid var(--color-focus);
+}
+
+.error {
+  color: var(--color-red);
+  font-weight: 500;
+}
+
+.wrapperBtn {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  margin-top: 1rem;
+}
+
+.saveBtn {
+  color: #ffffff;
+  background-color: #ff4b4b;
+}
+
+.saveBtn:hover {
+  background-color: #d62f2f;
+  border-color: #d62f2f;
+}
+
+.cancelBtn {
+  color: #ffffff;
+  background-color: #539841;
+}
+
+.cancelBtn:hover {
+  background-color: #35602a;
+  border-color: #35602a;
+}

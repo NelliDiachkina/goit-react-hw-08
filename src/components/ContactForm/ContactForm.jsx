@@ -48,7 +48,12 @@ export default function ContactForm() {
         </div>
         <div className={css.formItem}>
           <label htmlFor={numberFieldId}>Number</label>
-          <Field className={css.input} name="number" id={numberFieldId} />
+          <Field
+            className={css.input}
+            name="number"
+            id={numberFieldId}
+            placeholder="000-000-0000"
+          />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
         <button type="submit">Add contact</button>
