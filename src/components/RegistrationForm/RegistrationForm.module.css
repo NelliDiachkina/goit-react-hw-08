@@ -6,8 +6,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border: 1px solid currentColor;
-  border-radius: 8px;
 }
 
 .formItem {
