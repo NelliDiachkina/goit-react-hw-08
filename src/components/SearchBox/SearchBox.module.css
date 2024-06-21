@@ -1,10 +1,10 @@
 .wrapper {
   max-width: 400px;
   margin: 15px auto;
-  background-color: #dedede;
   padding: 1rem;
-  font-weight: 500;
   border-radius: 8px;
+  border: 1px solid currentColor;
+  box-shadow: var(--box-shadow);
 }
 
 .input {
@@ -16,4 +16,12 @@
   padding: 10px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+}
+
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 1rem;
 }

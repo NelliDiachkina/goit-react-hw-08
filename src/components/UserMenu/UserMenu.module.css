@@ -1,5 +1,18 @@
 .wrapper {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.button {
+  max-width: 137px;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 5px;
 }

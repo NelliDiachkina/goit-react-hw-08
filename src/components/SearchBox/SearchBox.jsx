@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { selectNameFilter } from '../../redux/filters/selectors';
 import { changeFilter } from '../../redux/filters/slice';
+import { FaSearch } from 'react-icons/fa';
 import css from './SearchBox.module.css';
 
 export default function SearchBox() {
@@ -9,11 +10,14 @@ export default function SearchBox() {
 
   return (
     <div className={css.wrapper}>
-      <label htmlFor="search-inpt">Find contacts by name</label>
+      <label htmlFor="search-inpt" className={css.label}>
+        <FaSearch />
+        Search contacts by name or number
+      </label>
       <input
         type="text"
         id="search-inpt"
-        placeholder="Enter contact name ..."
+        placeholder="Enter name or number ..."
         className={css.input}
         value={filter}
         onChange={e => dispatch(changeFilter(e.target.value))}

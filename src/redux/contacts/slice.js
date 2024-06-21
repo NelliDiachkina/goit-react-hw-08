@@ -54,6 +54,10 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = true;
       })
+      .addCase(updateContact.pending, state => {
+        state.error = false;
+        state.loading = true;
+      })
       .addCase(updateContact.fulfilled, (state, action) => {
         state.loading = false;
         const indexContact = state.items.findIndex(
@@ -61,6 +65,10 @@ const contactsSlice = createSlice({
         );
         state.items[indexContact] = action.payload;
         toast.success('Contact changed! 😊');
+      })
+      .addCase(updateContact.rejected, state => {
+        state.loading = false;
+        state.error = true;
       }),
 });
 

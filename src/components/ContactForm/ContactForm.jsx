@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
+import { IoMdPersonAdd } from 'react-icons/io';
 
 import css from './ContactForm.module.css';
 import { addContact } from '../../redux/contacts/operations';
@@ -56,7 +57,9 @@ export default function ContactForm() {
           />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-        <button type="submit">Add contact</button>
+        <button type="submit" className={css.button}>
+          Add contact <IoMdPersonAdd size="21px" />
+        </button>
       </Form>
     </Formik>
   );

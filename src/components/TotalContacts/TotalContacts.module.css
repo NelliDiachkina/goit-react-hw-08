@@ -1,0 +1,18 @@
+.wrapper {
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid currentColor;
+  box-shadow: var(--box-shadow);
+}
+
+.counterWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.counter {
+  font-size: 22px;
+  font-weight: 700;
+}

@@ -2,3 +2,9 @@
   display: flex;
   gap: 20px;
 }
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

@@ -12,6 +12,7 @@ export default function EditContactModal({
   if (!isOpen) return null;
 
   const initialValues = currentValues;
+
   const contactSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, 'Too Short!')
@@ -47,7 +48,7 @@ export default function EditContactModal({
           </div>
           <div className={css.formItem}>
             <label>
-              Numbe
+              Number
               <Field
                 className={css.input}
                 name="number"

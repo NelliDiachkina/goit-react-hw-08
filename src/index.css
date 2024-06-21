@@ -35,14 +35,15 @@ p {
 a {
   font-family: inherit;
   font-weight: 700;
-  color: #646cff;
+  color: currentColor;
   text-decoration: inherit;
   display: block;
   padding: 1rem 0px;
+  transition: color 0.25s;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #646cff;
 }
 
 h1 {
@@ -53,16 +54,18 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff;
   padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s,
+    background-color 0.25s;
   outline: none;
   box-shadow: var(--box-shadow);
+  height: 41px;
 }
 
 button:hover {
@@ -84,16 +87,14 @@ input:placeholder-shown {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
-  }
-  button:hover {
-    border-color: #213547;
-  }
-  a:hover {
-    color: #747bff;
+    background-color: #e3dddd;
   }
   button {
     background-color: #dedede;
+    border-color: currentColor;
+  }
+  button:hover {
+    color: #646cff;
   }
   input {
     background-color: #f9f9f9;

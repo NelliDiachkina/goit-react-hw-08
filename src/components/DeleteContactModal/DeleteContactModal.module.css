@@ -21,9 +21,10 @@
   max-width: 600px;
   border-radius: 8px;
   padding: 1rem;
-  background-color: #fcfcfc;
+  background-color: #2b2c3a;
   box-shadow: var(--box-shadow);
-  color: #000000;
+  color: #ffffff;
+  border: 1px solid currentColor;
 }
 
 .wrapperBtn {
@@ -33,22 +34,20 @@
   margin-top: 1rem;
 }
 
-.deleteBtn {
+.deleteBtn,
+.cancelBtn {
   color: #ffffff;
+}
+
+.deleteBtn {
   background-color: #ff4b4b;
 }
 
-.deleteBtn:hover {
-  background-color: #d62f2f;
-  border-color: #d62f2f;
-}
-
 .cancelBtn {
-  color: #ffffff;
-  background-color: #539841;
+  background-color: #5b5d79;
 }
 
-.cancelBtn:hover {
-  background-color: #35602a;
-  border-color: #35602a;
+.cancelBtn:hover,
+.deleteBtn:hover {
+  background-color: #1a1a1a;
 }
