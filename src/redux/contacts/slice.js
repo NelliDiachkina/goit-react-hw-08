@@ -9,7 +9,7 @@ import {
 import toast from 'react-hot-toast';
 
 const handlePending = state => {
-  state.error = false;
+  state.error = null;
   state.loading = true;
 };
 
