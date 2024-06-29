@@ -10,6 +10,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import ContactList from '../../components/ContactList/ContactList';
 import TotalContacts from '../../components/TotalContacts/TotalContacts';
 import css from './ContactsPage.module.css';
+import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ export default function ContactsPage() {
 
   return (
     <main className={css.main}>
+      <DocumentTitle>Contacts</DocumentTitle>
       <h2 className={css.title}>Phonebook</h2>
       {error && <ErrorMessage />}
       {loading && <Loader />}
