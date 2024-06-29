@@ -79,8 +79,7 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })
-      .addCase(refreshUser.rejected, (state, action) => {
-        handleRejected(state, action, 'Sorry! Failed to refresh user data 🤒');
+      .addCase(refreshUser.rejected, state => {
         state.isRefreshing = false;
       });
   },
