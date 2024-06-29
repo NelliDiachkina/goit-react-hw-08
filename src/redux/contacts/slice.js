@@ -8,6 +8,17 @@ import {
 } from '../../redux/contacts/operations';
 import toast from 'react-hot-toast';
 
+const handlePending = state => {
+  state.error = false;
+  state.loading = true;
+};
+
+const handleRejected = (state, action) => {
+  state.loading = false;
+  state.error = action.payload;
+  toast.error('🤒 Something went wrong!');
+};
+
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
@@ -17,48 +28,27 @@ const contactsSlice = createSlice({
   },
   extraReducers: builder =>
     builder
-      .addCase(fetchContacts.pending, state => {
-        state.error = false;
-        state.loading = true;
-      })
+      .addCase(fetchContacts.pending, handlePending)
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.loading = false;
         state.items = action.payload;
       })
-      .addCase(fetchContacts.rejected, state => {
-        state.loading = false;
-        state.error = true;
-      })
-      .addCase(deleteContact.pending, state => {
-        state.error = false;
-        state.loading = true;
-      })
+      .addCase(fetchContacts.rejected, handleRejected)
+      .addCase(deleteContact.pending, handlePending)
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.loading = false;
         state.items = state.items.filter(item => item.id !== action.payload.id);
         toast.success('DELETED! 🗑️');
       })
-      .addCase(deleteContact.rejected, state => {
-        state.loading = false;
-        state.error = true;
-      })
-      .addCase(addContact.pending, state => {
-        state.error = false;
-        state.loading = true;
-      })
+      .addCase(deleteContact.rejected, handleRejected)
+      .addCase(addContact.pending, handlePending)
       .addCase(addContact.fulfilled, (state, action) => {
         state.loading = false;
         state.items.push(action.payload);
         toast.success('Added contact! 😊');
       })
-      .addCase(addContact.rejected, state => {
-        state.loading = false;
-        state.error = true;
-      })
-      .addCase(updateContact.pending, state => {
-        state.error = false;
-        state.loading = true;
-      })
+      .addCase(addContact.rejected, handleRejected)
+      .addCase(updateContact.pending, handlePending)
       .addCase(updateContact.fulfilled, (state, action) => {
         state.loading = false;
         const indexContact = state.items.findIndex(
@@ -67,10 +57,7 @@ const contactsSlice = createSlice({
         state.items[indexContact] = action.payload;
         toast.success('Contact changed! 😊');
       })
-      .addCase(updateContact.rejected, state => {
-        state.loading = false;
-        state.error = true;
-      })
+      .addCase(updateContact.rejected, handleRejected)
       .addCase(logout.fulfilled, state => {
         state.items = [];
         state.error = null;
