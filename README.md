@@ -4,10 +4,11 @@
 модуля можливість реєстрації та логіна, а також роботу з приватною колекцією
 контактів.
 
-![1](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/58e1c61e-d4f4-4240-ba38-3d0604bb696b)
+![1](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/214a5902-3741-4160-9cf6-d6d4bc7fb41b)
 ![2](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/864613a9-b974-4e02-bca0-8c5f1a069e2f)
 ![3](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/5d01713f-6e9f-497e-95cf-ac9a9529dea1)
-![4](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/93d6abf9-22dc-46c6-a499-7a1b1b6edf56)
+![4](https://github.com/NelliDiachkina/goit-react-hw-08/assets/99911692/d1ca6a20-880b-45d7-9673-a1ef5ab4c9e2)
+
 
 #### Бекенд
 
