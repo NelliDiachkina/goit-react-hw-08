@@ -22,7 +22,7 @@
   border-radius: 8px;
   padding: 1rem;
   background-color: #2b2c3a;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-card);
   color: #ffffff;
   border: 1px solid currentColor;
 }
