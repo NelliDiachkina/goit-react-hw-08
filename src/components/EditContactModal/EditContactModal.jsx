@@ -40,14 +40,14 @@ export default function EditContactModal({
       >
         <Form className={css.form}>
           <div className={css.formItem}>
-            <label>
+            <label className={css.label}>
               Name
               <Field className={css.input} name="name" />
             </label>
             <ErrorMessage className={css.error} name="name" component="span" />
           </div>
           <div className={css.formItem}>
-            <label>
+            <label className={css.label}>
               Number
               <Field
                 className={css.input}

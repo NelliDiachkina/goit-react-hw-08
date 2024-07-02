@@ -12,8 +12,8 @@
 
 .form {
   color: #ffffff;
-  width: 40%;
   min-width: 300px;
+  width: 60%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -33,11 +33,14 @@
   width: 100%;
 }
 
-.input {
+.label {
   display: block;
+  width: 100%;
+}
+.input {
+  width: 100%;
   margin-top: 5px;
   height: 32px;
-  width: 100%;
   outline: none;
   padding: 10px;
   border: 1px solid var(--border-color);
