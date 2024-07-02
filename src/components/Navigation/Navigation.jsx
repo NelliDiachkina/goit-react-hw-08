@@ -10,13 +10,12 @@ export default function Navigation() {
   return (
     <nav className={css.nav}>
       <NavLink className={css.link} to="/">
-        <GoHomeFill size="22px" />
-        Home
+        <GoHomeFill size="24px" />
       </NavLink>
       {isLoggedIn && (
         <NavLink className={css.link} to="/contacts">
-          <RiContactsFill size="22px" />
           Contacts
+          <RiContactsFill size="22px" />
         </NavLink>
       )}
     </nav>

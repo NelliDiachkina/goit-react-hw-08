@@ -17,7 +17,8 @@
   --color-focus: #ffd51b;
   --color-red: #ec1212;
   --border-color: #999999;
-  --box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.14);
+  --box-shadow: 0 4px 12px #ecececb7;
+  --box-shadow-card: 3px 3px 6px #ececec95;
 }
 
 ul,
@@ -65,15 +66,14 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s,
-    background-color 0.25s;
+  transition: border-color 0.25s, color 0.25s;
   outline: none;
-  box-shadow: var(--box-shadow);
   height: 41px;
 }
 
 button:hover {
   border-color: #646cff;
+  color: #646cff;
 }
 
 input:focus {
@@ -92,6 +92,8 @@ input:placeholder-shown {
   :root {
     color: #213547;
     background-color: #e3dddd;
+    --box-shadow: 0 4px 12px #282828b7;
+    --box-shadow-card: 3px 3px 6px #282828b7;
   }
   button {
     background-color: #dedede;

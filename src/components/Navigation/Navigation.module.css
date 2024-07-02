@@ -1,6 +1,7 @@
 .nav {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
 }
 
 .link {

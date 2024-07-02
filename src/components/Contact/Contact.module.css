@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-card);
 }
 
 .wrapper,

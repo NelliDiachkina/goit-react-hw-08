@@ -1,9 +1,14 @@
 .header {
+  padding: 1rem;
+  border-bottom: 1px solid currentColor;
+  box-shadow: var(--box-shadow);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
-  border-bottom: 1px solid currentColor;
-  box-shadow: var(--box-shadow);
 }
