@@ -3,8 +3,8 @@
   margin: 15px auto;
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid currentColor;
-  box-shadow: var(--box-shadow-card);
+  border: 1px solid var(--color-decoration);
+  box-shadow: var(--box-shadow-decor);
 }
 
 .input {

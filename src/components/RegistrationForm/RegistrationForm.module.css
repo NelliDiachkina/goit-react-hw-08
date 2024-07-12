@@ -29,5 +29,4 @@ input:focus {
 
 .error {
   color: var(--color-red);
-  font-weight: 500;
 }

@@ -2,20 +2,25 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { GoHomeFill } from 'react-icons/go';
-import { RiContactsFill } from 'react-icons/ri';
+import { MdContacts } from 'react-icons/md';
+import clsx from 'clsx';
 import css from './Navigation.module.css';
+
+const makeLinkClass = ({ isActive }) => {
+  return clsx(css.link, isActive && css.activeLink);
+};
 
 export default function Navigation() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <nav className={css.nav}>
-      <NavLink className={css.link} to="/">
-        <GoHomeFill size="24px" />
+      <NavLink to="/" className={makeLinkClass}>
+        <GoHomeFill size="21px" />
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
-          Contacts
-          <RiContactsFill size="22px" />
+        <NavLink to="/contacts" className={makeLinkClass}>
+          <MdContacts size="21px" />
         </NavLink>
       )}
     </nav>

@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1d1d2b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,11 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-decoration: #646cff;
-  --color-focus: #ffd51b;
+  --color-focus: #eb8108;
   --color-red: #ec1212;
   --border-color: #999999;
   --box-shadow: 0 4px 12px #ecececb7;
   --box-shadow-card: 3px 3px 6px #ececec95;
+  --box-shadow-wrapper: 0 0 10px #232425, inset 0 0 20px #308bc7d1;
+  --box-shadow-decor: 0 4px 15px #646cffc9;
 }
 
 ul,
@@ -43,13 +45,12 @@ a {
 }
 
 a:hover {
-  color: #646cff;
+  color: var(--color-decoration);
 }
 
 h1 {
   font-size: 2em;
   line-height: 1.1;
-  text-align: center;
 }
 
 h2 {
@@ -66,14 +67,23 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s, color 0.25s;
   outline: none;
   height: 41px;
+  color: currentColor;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+button:hover,
+input {
+  color: var(--color-decoration);
 }
 
 button:hover {
-  border-color: #646cff;
-  color: #646cff;
+  border-color: var(--color-decoration);
+}
+
+input {
+  background-color: #1d1d2b;
 }
 
 input:focus {
@@ -86,23 +96,4 @@ input:placeholder-shown {
 
 .no-scroll {
   overflow: hidden;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #e3dddd;
-    --box-shadow: 0 4px 12px #282828b7;
-    --box-shadow-card: 3px 3px 6px #282828b7;
-  }
-  button {
-    background-color: #dedede;
-    border-color: currentColor;
-  }
-  button:hover {
-    color: #646cff;
-  }
-  input {
-    background-color: #f9f9f9;
-  }
 }

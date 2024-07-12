@@ -4,12 +4,12 @@
   align-items: center;
   gap: 20px;
   padding: 1rem;
-  border: 1px solid currentColor;
+  border: 1px solid var(--color-decoration);
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  box-shadow: var(--box-shadow-card);
+  box-shadow: var(--box-shadow-decor);
 }
 
 .wrapper,

@@ -7,12 +7,12 @@ import css from './AppBar.module.css';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 export default function AppBar() {
-  const isLoddedIn = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <header className={css.header}>
       <div className={css.container}>
         <Navigation />
-        {isLoddedIn ? <UserMenu /> : <AuthNav />}
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </div>
     </header>
   );

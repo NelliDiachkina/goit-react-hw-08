@@ -1,11 +1,26 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 0.5em 1em;
+  background-color: #1a1a1a;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.link:hover {
+  border-color: #646cff;
+  color: #646cff;
+}
+
+.activeLink {
+  border-color: var(--color-focus);
+  color: var(--color-focus);
 }
