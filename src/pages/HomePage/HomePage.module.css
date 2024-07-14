@@ -3,6 +3,7 @@
 }
 
 .title {
+  color: var(--color-focus);
   margin: 0 auto;
   margin-bottom: 2.5rem;
   max-width: 650px;
@@ -11,6 +12,8 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .wrapper,

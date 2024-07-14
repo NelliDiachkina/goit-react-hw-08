@@ -1,3 +1,17 @@
 .main {
   padding: 1rem;
 }
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.title {
+  color: var(--color-focus);
+  text-shadow: 2px 2px 8px #000000;
+}

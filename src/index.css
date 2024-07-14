@@ -70,6 +70,7 @@ button {
   outline: none;
   height: 41px;
   color: currentColor;
+  margin-top: 10px;
   transition: border-color 0.25s, color 0.25s;
 }
 

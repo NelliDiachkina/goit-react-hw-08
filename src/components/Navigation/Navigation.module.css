@@ -15,11 +15,7 @@
   transition: border-color 0.25s, color 0.25s;
 }
 
-.link:hover {
-  border-color: #646cff;
-  color: #646cff;
-}
-
+.link:hover,
 .activeLink {
   border-color: var(--color-focus);
   color: var(--color-focus);

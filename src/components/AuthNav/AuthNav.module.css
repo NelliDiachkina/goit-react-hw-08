@@ -3,6 +3,11 @@
   gap: 20px;
 }
 
+.link {
+  transition: color 0.25s;
+}
+
+.link:hover,
 .activeLink {
   color: var(--color-focus);
 }
